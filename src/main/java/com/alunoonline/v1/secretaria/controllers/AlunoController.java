@@ -1,7 +1,7 @@
-package com.alunoonline.v1.controllers;
+package com.alunoonline.v1.secretaria.controllers;
 
-import com.alunoonline.v1.models.Aluno;
-import com.alunoonline.v1.services.AlunoService;
+import com.alunoonline.v1.secretaria.models.Aluno;
+import com.alunoonline.v1.secretaria.services.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

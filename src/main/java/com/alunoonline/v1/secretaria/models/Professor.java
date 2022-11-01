@@ -1,4 +1,4 @@
-package com.alunoonline.v1.models;
+package com.alunoonline.v1.secretaria.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Aluno implements Serializable {
+public class Professor implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,4 @@ public class Aluno implements Serializable {
     private String nome;
 
     private String email;
-
-    private String curso;
-
 }

@@ -1,6 +1,6 @@
-package com.alunoonline.v1.repositories;
+package com.alunoonline.v1.secretaria.repositories;
 
-import com.alunoonline.v1.models.Aluno;
+import com.alunoonline.v1.secretaria.models.Aluno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
