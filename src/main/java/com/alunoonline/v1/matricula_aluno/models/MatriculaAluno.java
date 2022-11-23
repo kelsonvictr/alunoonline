@@ -1,4 +1,4 @@
-package com.alunoonline.v1.aluno.models;
+package com.alunoonline.v1.matricula_aluno.models;
 
 import com.alunoonline.v1.secretaria.models.Aluno;
 import com.alunoonline.v1.secretaria.models.Disciplina;
