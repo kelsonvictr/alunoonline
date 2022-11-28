@@ -1,5 +1,6 @@
 package com.alunoonline.v1.matricula_aluno.controllers;
 
+import com.alunoonline.v1.matricula_aluno.dtos.HistoricoAlunoDto;
 import com.alunoonline.v1.matricula_aluno.models.MatriculaAluno;
 import com.alunoonline.v1.matricula_aluno.dtos.MatriculaAlunoNotasOnlyDto;
 import com.alunoonline.v1.matricula_aluno.services.MatriculaAlunoService;
@@ -25,8 +26,22 @@ public class MatriculaAlunoController {
 
     @PatchMapping("/updateGrades/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void patch(@RequestBody MatriculaAlunoNotasOnlyDto notasOnlyDto,
+    public void patchGrades(@RequestBody MatriculaAlunoNotasOnlyDto notasOnlyDto,
                                                 @PathVariable Long id) {
          service.updateGrades(notasOnlyDto, id);
     }
+
+    @PatchMapping("/updateStatusToBreak/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void patchStatus(@PathVariable Long id) throws Exception {
+        service.updateStatusToBreak(id);
+    }
+
+    @GetMapping("/studentGrades/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public HistoricoAlunoDto studentGrades(@PathVariable Long id) {
+        return service.getHistoricoFromAluno(id);
+    }
+
+
 }
